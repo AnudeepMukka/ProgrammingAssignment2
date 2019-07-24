@@ -1,8 +1,9 @@
 ## Put comments here that give an overall description of what your
 ## functions do
 
-## Write a short comment describing this function
 
+## makeCacheMatrix stores the Inverse Matrix value as cache and generates a list as output
+## The "<<" operator uses lexical scoping of R and changes x and I values in parent environment
 makeCacheMatrix <- function(x = matrix()) {
 I <- NULL
   set <- function(y) {
@@ -17,6 +18,8 @@ I <- NULL
        getinverse = getinverse)
 }
 
+##Cachesolve takes makecachematrix as an argument
+##Checks if cache value is present in makecachematrix function. if not it generates an inverse and stores in setinverse function
 
 cacheSolve <- function(x, ...) {
         I <- x$getinverse()
